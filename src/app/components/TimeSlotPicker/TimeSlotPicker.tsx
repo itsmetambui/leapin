@@ -69,7 +69,7 @@ export default function TimeSlotPicker({
     },
     onSuccess: () => {
       alert("Meeting booked! See you soon");
-      queryClient.invalidateQueries("slots");
+      queryClient.invalidateQueries();
       setPreSelectedSlot({} as Timeslot);
     },
     onError: (error) => {
