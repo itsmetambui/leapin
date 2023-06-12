@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Live at [https://leapin.vercel.app/](https://leapin.vercel.app/)
+
+## General idea
+- Building calendly react components from scratch.
+- Use google calendar api to fetch booked events and book new events.
+
+## Improvents
+- We can make the React components more generic, surface more props out.
+- Add Unit tests.
+- Time slot filtering algorithm can be improved.
+
 ## Getting Started
 
 First, run the development server:
