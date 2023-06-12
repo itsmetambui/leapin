@@ -7,6 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Use google calendar api to fetch booked events and book new events.
 
 ## Improvents
+- Invalidate query bug - queries should be reset after booking a meeting, so that the time slots picker can reflect the actual available slots.
 - We can make the React components more generic, surface more props out.
 - Add Unit tests.
 - Time slot filtering algorithm can be improved.
