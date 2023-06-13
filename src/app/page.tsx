@@ -1,6 +1,13 @@
 "use client";
 
-import { format, getDay, isFuture, isToday, startOfDay } from "date-fns";
+import {
+  addDays,
+  format,
+  getDay,
+  isFuture,
+  isToday,
+  startOfDay,
+} from "date-fns";
 import Datepicker from "./components/DatePicker/DatePicker";
 import Timeslotpicker from "./components/TimeSlotPicker/TimeSlotPicker";
 import { useState } from "react";
@@ -8,7 +15,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import TimeZonePicker from "./components/TimeZonePicker/TimeZonePicker";
 
 export default function Home() {
-  const [selectedDate, setSelectedDate] = useState(startOfDay(new Date()));
+  const [selectedDate, setSelectedDate] = useState(
+    addDays(startOfDay(new Date()), 1)
+  );
   const [timeZone, setTimeZone] = useState(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   );
@@ -28,9 +37,7 @@ export default function Home() {
               dayLabelFormat={(date: Date) => format(date, "dd")}
               filterDate={(date) => {
                 const day = getDay(date);
-                return (
-                  day !== 0 && day !== 6 && (isToday(date) || isFuture(date))
-                );
+                return day !== 0 && day !== 6 && isFuture(date);
               }}
             />
 

@@ -3,10 +3,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Live at [https://leapin.vercel.app/](https://leapin.vercel.app/)
 
 ## General idea
+
 - Building calendly react components from scratch.
 - Use google calendar api to fetch booked events and book new events.
 
 ## Improvents
+
+- Cut off time bug - there's no cut off time logic for now for time slot, only cut off time for days
 - Invalidate query bug - queries should be reset after booking a meeting, so that the time slots picker can reflect the actual available slots.
 - We can make the React components more generic, surface more props out.
 - Add Unit tests.
